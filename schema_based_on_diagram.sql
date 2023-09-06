@@ -33,3 +33,5 @@ CREATE TABLE treatments(
     type VARCHAR(50),
     name VARCHAR(50)
 );
+
+ALTER TABLE invoice_items ADD CONSTRAINT fk_treatments FOREIGN KEY(treatment_id) REFERENCES treatments(id);

@@ -41,3 +41,6 @@ CREATE TABLE treatement_medical_history (
     medical_history_id INT REFERENCES medical_histories(id),
     treatments_id INT REFERENCES treatments(id)
 );
+
+CREATE INDEX idx_treatment_id ON invoice_items(treatment_id ASC);
+CREATE INDEX idx_medical_history_id ON invoices(medical_history_id ASC);
